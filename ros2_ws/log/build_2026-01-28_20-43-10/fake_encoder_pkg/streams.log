@@ -1,0 +1,18 @@
+[0.587s] Invoking command in '/home/technomant/ros2_ws/build/fake_encoder_pkg': PYTHONPATH=/home/technomant/ros2_ws/build/fake_encoder_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/technomant/ros2_ws/install/fake_encoder_pkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/technomant/ros2_ws/build/fake_encoder_pkg/build --no-deps symlink_data
+[0.836s] running develop
+[0.993s] running egg_info
+[0.993s] writing fake_encoder_pkg.egg-info/PKG-INFO
+[0.993s] writing dependency_links to fake_encoder_pkg.egg-info/dependency_links.txt
+[0.993s] writing entry points to fake_encoder_pkg.egg-info/entry_points.txt
+[0.993s] writing requirements to fake_encoder_pkg.egg-info/requires.txt
+[0.994s] writing top-level names to fake_encoder_pkg.egg-info/top_level.txt
+[0.996s] reading manifest file 'fake_encoder_pkg.egg-info/SOURCES.txt'
+[0.996s] writing manifest file 'fake_encoder_pkg.egg-info/SOURCES.txt'
+[0.998s] running build_ext
+[0.998s] Creating /home/technomant/ros2_ws/install/fake_encoder_pkg/lib/python3.10/site-packages/fake-encoder-pkg.egg-link (link to .)
+[0.998s] Installing listener script to /home/technomant/ros2_ws/install/fake_encoder_pkg/lib/fake_encoder_pkg
+[0.999s] Installing talker script to /home/technomant/ros2_ws/install/fake_encoder_pkg/lib/fake_encoder_pkg
+[0.999s] 
+[0.999s] Installed /home/technomant/ros2_ws/build/fake_encoder_pkg
+[0.999s] running symlink_data
+[1.025s] Invoked command in '/home/technomant/ros2_ws/build/fake_encoder_pkg' returned '0': PYTHONPATH=/home/technomant/ros2_ws/build/fake_encoder_pkg/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/technomant/ros2_ws/install/fake_encoder_pkg/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/technomant/ros2_ws/build/fake_encoder_pkg/build --no-deps symlink_data

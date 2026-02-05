@@ -1,0 +1,5 @@
+[console_scripts]
+driver = fake_encoder_pkg.encoder_driver:main
+encoder = fake_encoder_pkg.fake_encoder:main
+odometry = fake_encoder_pkg.wheel_odom:main
+
