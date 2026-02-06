@@ -9,7 +9,7 @@ class EncoderDriver(Node):
     def __init__(self):
         super().__init__('encoder_driver')
         
-        # Declare parameter for ticks per revolution (should match fake_encoder)
+        # Declare parameter for ticks per revolution
         self.declare_parameter('ticks_per_rev', 2048)
         
         # Get the parameter value
@@ -55,8 +55,7 @@ class EncoderDriver(Node):
         left_ticks = msg.data[0]
         right_ticks = msg.data[1]
         
-        # Convert ticks to angle using the formula: θ = 2π * (ticks / ticks_per_rev)
-        # Using pre-calculated radians_per_tick for efficiency
+        # Convert ticks to angle
         left_angle = left_ticks * self.radians_per_tick
         right_angle = right_ticks * self.radians_per_tick
         
@@ -76,19 +75,16 @@ class EncoderDriver(Node):
         
         # Set header timestamp
         joint_state_msg.header.stamp = current_time.to_msg()
-        joint_state_msg.header.frame_id = 'base_link'  # Or appropriate frame
+        joint_state_msg.header.frame_id = 'base_link'
         
-        # Set joint names (recommended names from the task)
+        # Set joint names
         joint_state_msg.name = ['left_wheel_joint', 'right_wheel_joint']
         
-        # Set positions (angles in radians)
+        # Set positions
         joint_state_msg.position = [float(left_angle), float(right_angle)]
         
-        # Set velocities (angular velocities in rad/s)
+        # Set velocities
         joint_state_msg.velocity = [float(left_velocity), float(right_velocity)]
-        
-        # Optional: effort/torque (empty if not applicable)
-        joint_state_msg.effort = []
         
         # Publish the joint states
         self.publisher_.publish(joint_state_msg)
@@ -100,7 +96,6 @@ class EncoderDriver(Node):
         self.prev_right_ticks = right_ticks
         self.prev_time = current_time
         
-        # Optional: Log for debugging (use debug level to avoid spamming)
         self.get_logger().info(
             f'Angles: L={left_angle:.3f}rad, R={right_angle:.3f}rad | '
             f'Velocity: L={left_velocity:.3f}rad/s, R={right_velocity:.3f}rad/s'
